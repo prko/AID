@@ -41,6 +41,7 @@ code::
 
 // Local HTML files:
 (SCDoc.helpTargetDir +/+ "Guides/AID.html").aid;
+(SCDoc.helpTargetDir +/+ "help.html").aid;
 
 // Local files (opens in the OS default application):
 (Quarks.folder +/+ "AID/AID.scd").aid;

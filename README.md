@@ -32,10 +32,11 @@ Append `.aid` to any string representing a class name, method, search term, URL,
 "Object for managing a Quark - a package of source code".help;
 
 // Online documentation and web addresses:
-"[https://github.com/supercollider-quarks/quarks](https://github.com/supercollider-quarks/quarks)".aid;
+"https://github.com/supercollider-quarks/quarks".aid;
 
 // Local HTML files:
 (SCDoc.helpTargetDir +/+ "Guides/AID.html").aid;
+(SCDoc.helpTargetDir +/+ "help.html").aid;
 
 // Local files (opens in the OS default application):
 (Quarks.folder +/+ "AID/AID.scd").aid;

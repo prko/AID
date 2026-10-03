@@ -30,6 +30,7 @@ and HTML files, can also be accessed.
 
 // Local HTML files:
 (SCDoc.helpTargetDir +/+ "Guides/AID.html").aid;
+(SCDoc.helpTargetDir +/+ "help.html").aid;
 
 // Local SCD files:
 (Quarks.folder +/+ "AID/AID.scd").aid;
