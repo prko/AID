@@ -1,0 +1,54 @@
+TITLE:: AID
+summary:: Documentation lookup helper adding the aid method to the String class.
+categories:: Libraries>Documentation
+related:: Guides/UsingQuarks, Classes/Quarks, Classes/Quark, Classes/String
+
+strong::AID:: adds the convenience method link::Classes/String#-aid:: to link::Classes/String::.
+It provides a fast, intuitive way to look up SuperCollider documentation directly from string literals for new users, occasional users, and those working with link::Classes/Quarks##third-party Quarks::.
+It is syntactic sugar for the following methods:
+
+list::
+## link::Classes/HelpBrowser#*goTo::
+## link::Classes/String#-help::
+## link::Classes/String#-openOS::
+::
+
+Classes, methods, titles, and summaries work in the same way as link::Classes/String#-help:::
+
+code::
+// Classes:
+"Quark".aid;
+"Quark".help;
+
+// Methods:
+"help".aid;
+"help".help;
+
+// Titles:
+"Using Quarks".aid;
+"Using Quarks".help;
+
+// Summaries:
+"Object for managing a Quark - a package of source code".aid;
+"Object for managing a Quark - a package of source code".help;
+::
+
+Online documentation, web addresses, and local files (such as SCD, HTML, or any other format handled by the OS default application) can also be accessed directly:
+
+code::
+// Online documentation and web addresses:
+"https://github.com/supercollider-quarks/quarks".aid;
+
+// Local HTML files:
+(SCDoc.helpTargetDir +/+ "Guides/AID.html").aid;
+
+// Local files (opens in the OS default application):
+(Quarks.folder +/+ "AID/AID.scd").aid;
+(Quarks.folder +/+ "AID/README.rtf").aid;
+::
+
+If no exact match is found, it automatically falls back to the SuperCollider Help Search page:
+
+code::
+"Pbinds".aid
+::

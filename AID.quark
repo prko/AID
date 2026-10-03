@@ -1,0 +1,16 @@
+(
+	name:			"AID",
+	summary:		"Documentation lookup helpers for String.",
+	version:		"0.0.1",
+	schelp:			"AID.schelp",
+	helpdoc:		"AID.html",
+	dependencies:	[],
+	license:		"MIT",
+	copyright:		"prko, 2026",
+	author:			"PyoungRyang Ko",
+	url:			"https://github.com/prko/AID",
+	isCompatible:	{ Main.versionAtLeast(3, 15) },
+	organisation:	"none",
+	country:		"South Korea",
+	since:			"2026"
+)

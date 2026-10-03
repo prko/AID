@@ -1,0 +1,15 @@
+instancemethods::
+
+method:: aid
+
+Opens the given string in the help system or in the default application of the userʼs OS.
+If the string resembles an HTML filename or a URL, it is opened directly via link::Classes/HelpBrowser#*goTo::.
+Otherwise, the corresponding documentation or file is opened when available.
+If multiple related documents exist, or none is found, the help search page displays the results.
+
+argument:: path
+
+Accepts the names of classes, methods, documentation titles, documentation summaries, web addresses, and local file paths.
+
+discussion::
+See link::Guides/AID::.
