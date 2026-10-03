@@ -4,6 +4,12 @@ A SuperCollider documentation lookup helper adding the aid method to the String 
 **AID** provides a fast, intuitive way to look up SuperCollider documentation directly from string literals for new users, occasional users, and those working with third-party Quarks.
 It is syntactic sugar for `HelpBrowser.goTo("path")`, `"a/absolute/path/to/a/file".help`, and `"a/absolute/path/to/a/file".openOS`.
 
+## Install
+
+```supercollider
+"https://github.com/prko/AID".include
+```
+
 ## Usage
 
 Append `.aid` to any string representing a class name, method, search term, URL, or local file path. It automatically routes the string to the help browser or opens local files (such as `.sc`, `.scd`, or any other format) in your operating system's default application:
