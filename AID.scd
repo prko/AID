@@ -34,3 +34,9 @@ and HTML files, can also be accessed.
 
 // Local SCD files:
 (Quarks.folder +/+ "AID/AID.scd").aid;
+
+// Local SC files:
+(Quarks.folder +/+ "AID/Classes/extString.sc").aid
+
+ // Local RTF files:
+(Quarks.folder +/+ "AID/README.rtf").aid;

@@ -39,8 +39,9 @@ Append `.aid` to any string representing a class name, method, search term, URL,
 (SCDoc.helpTargetDir +/+ "help.html").aid;
 
 // Local files (opens in the OS default application):
-(Quarks.folder +/+ "AID/AID.scd").aid;
-(Quarks.folder +/+ "AID/README.rtf").aid;
+(Quarks.folder +/+ "AID/AID.scd").aid; // Local SCD files:
+(Quarks.folder +/+ "AID/Classes/extString.sc").aid  // Local SC files:
+(Quarks.folder +/+ "AID/README.rtf").aid; // Local RTF files:
 ```
 
 If no exact match is found, **AID** automatically falls back to the SuperCollider Help Search page.
