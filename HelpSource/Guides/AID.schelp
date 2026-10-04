@@ -10,9 +10,21 @@ This makes it ideal for SuperCollider novices, occasional users, and those explo
 It is syntactic sugar for the following methods:
 
 list::
-## link::Classes/HelpBrowser#*goTo::
-## link::Classes/String#-help::
-## link::Classes/String#-openOS::
+## link::Classes/HelpBrowser#*goTo:::
+
+code::HelpBrowser.goTo("path")::
+
+## link::Classes/String#-help:::
+
+code::"path".help::
+
+## link::Classes/String#-openOS:::
+
+code::"path".openOS::
+
+## The method chain combining link::Classes/String#-resolveRelative:: and link::Classes/String#-openDocument:::
+
+code::"filename_without_path.scd".resolveRelative.openDocument::
 ::
 
 Classes, methods, titles, and summaries function exactly like link::Classes/String#-help:::

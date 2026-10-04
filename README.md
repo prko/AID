@@ -1,7 +1,7 @@
 # AID
 **AID** is a SuperCollider documentation lookup helper that adds the aid method to the String class. It provides a fast and intuitive way to look up help files, browse URLs, and open local files directly from string literals. This makes it ideal for SuperCollider novices, occasional users, and those exploring third-party Quarks.
 
-It serves as syntactic sugar for `HelpBrowser.goTo("path")`, `"path".help`, and `"path".openOS`.
+It serves as syntactic sugar for `HelpBrowser.goTo("path")`, `"path".help`, `"path".openOS` and `"filename_without_path.scd".resolveRelative.openDocument`.
 
 ## Install
 
