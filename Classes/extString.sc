@@ -1,16 +1,26 @@
 + String {
 	aid {
-		if("(.htm(|l))|(http(|s)://)".matchRegexp(this)) {
-			var targetUrl = this;
+		var isInsideQuarks = false;
+		var targetUrl = this;
+		var path = this.standardizePath;
 
-			if(targetUrl.beginsWith("/") or: { targetUrl[1] == $: }) {
-				targetUrl = URI.fromLocalPath(targetUrl).asString;
+		if(this.beginsWith("/") or: { this[1] == $: }) {
+			var quarksURI = URI.fromLocalPath(Quarks.folder).asString;
+
+			targetUrl = URI.fromLocalPath(this).asString;
+
+			if(thisProcess.platform.name == \windows) {
+				isInsideQuarks = targetUrl.toLower.beginsWith(quarksURI.toLower);
+			} {
+				isInsideQuarks = targetUrl.beginsWith(quarksURI);
 			};
+		};
 
+		if("(.htm(|l))|(http(|s)://)".matchRegexp(this) or: { isInsideQuarks and: { PathName(path).isFolder } }) {
 			HelpBrowser.goTo(targetUrl)
 		} {
-			if(File.exists(this.standardizePath)) {
-				this.standardizePath.openOS
+			if(File.exists(path)) {
+				path.openOS
 			} {
 				if(Platform.openHelpFileAction.notNil) {
 					Platform.openHelpFileAction.value(this)

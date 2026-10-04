@@ -1,8 +1,7 @@
 # AID
-A SuperCollider documentation lookup helper adding the aid method to the String class. It provides a fast, intuitive way to discover help files, URLs, and open any local file—ideal for SC novices and exploring third-party Quarks.
+**AID** is a SuperCollider documentation lookup helper that adds the aid method to the String class. It provides a fast and intuitive way to look up help files, browse URLs, and open local files directly from string literals. This makes it ideal for SuperCollider novices, occasional users, and those exploring third-party Quarks.
 
-**AID** provides a fast, intuitive way to look up SuperCollider documentation directly from string literals for new users, occasional users, and those working with third-party Quarks.
-It is syntactic sugar for `HelpBrowser.goTo("path")`, `"a/absolute/path/to/a/file".help`, and `"a/absolute/path/to/a/file".openOS`.
+It serves as syntactic sugar for `HelpBrowser.goTo("path")`, `"path".help`, and `"path".openOS`.
 
 ## Install
 
@@ -42,6 +41,9 @@ Append `.aid` to any string representing a class name, method, search term, URL,
 (Quarks.folder +/+ "AID/AID.scd").aid; // Local SCD files:
 (Quarks.folder +/+ "AID/Classes/extString.sc").aid  // Local SC files:
 (Quarks.folder +/+ "AID/README.rtf").aid; // Local RTF files:
+
+// Quark folders (opens in the HelpBrowser for easy access to various help documents):
+(Quarks.folder +/+ "AID").aid;
 ```
 
 If no exact match is found, **AID** automatically falls back to the SuperCollider Help Search page.
@@ -53,7 +55,3 @@ If no exact match is found, **AID** automatically falls back to the SuperCollide
 ## Why `.aid`?
 
 Using `String:aid` instead of `String:help` prevents conflicts with existing extensions, main class library methods, and potential future SuperCollider updates.
-
-## Compatibility
-
-Tested with recent SuperCollider releases. This quark does not overwrite existing system classes and installs safely without requiring a `SystemOverwrites` directory.

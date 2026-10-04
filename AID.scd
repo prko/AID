@@ -40,3 +40,6 @@ and HTML files, can also be accessed.
 
  // Local RTF files:
 (Quarks.folder +/+ "AID/README.rtf").aid;
+
+// Quark folders (opens in the HelpBrowser for easy access to various help documents):
+(Quarks.folder +/+ "AID").aid;

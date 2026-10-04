@@ -16,7 +16,8 @@ AID
 \f2\i\fs32 \cb3 Documentation lookup helper adding the aid method to the String class.
 \f1\i0 \cb1 \
 \
-\cb3 AID\'a0adds the convenience method\'a0.aid\'a0to\'a0String. It provides a fast, intuitive way to look up SuperCollider documentation directly from string literals for new users, occasional users, and those working with\'a0third-party Quarks. It is syntactic sugar for the following methods:\cb1 \
+\cb3 AID is a SuperCollider documentation lookup helper that adds the aid method to the String class. It provides a fast and intuitive way to look up help files, browse URLs, and open local files directly from string literals. This makes it ideal for SuperCollider novices, occasional users, and those exploring third-party Quarks. \
+It is syntactic sugar for the following methods:\cb1 \
 \cb3     \'95   HelpBrowser: *goTo\cb1 \
 \cb3     \'95   String: -help\cb1 \
 \cb3     \'95   String: -openOS\
@@ -60,8 +61,12 @@ AID
 (SCDoc.helpTargetDir +/+ "help.html").aid;\cb1 \
 \
 \cb3 // Local files (opens in the OS default application):\cb1 \
-\cb3 (Quarks.folder +/+ "AID/AID.scd").aid;\cb1 \
-\cb3 (Quarks.folder +/+ "AID/README.rtf").aid;\cb1 \cell \lastrow\row
+\cb3 (Quarks.folder +/+ "AID/AID.scd").aid; // Local SCD files:\
+(Quarks.folder +/+ "AID/Classes/extString.sc").aid  // Local SC files:\
+(Quarks.folder +/+ "AID/README.rtf").aid; // Local RTF files:\
+\
+// Quark folders (opens in the HelpBrowser for easy access to various help documents):\
+(Quarks.folder +/+ "AID").aid;\cb1 \cell \lastrow\row
 \pard\pardeftab720\sl360\slmult1\partightenfactor0
 \cf2 \
 \
@@ -72,4 +77,6 @@ AID
 \clvertalc \clshdrawnil \clbrdrt\brdrs\brdrw20\brdrcf4 \clbrdrl\brdrs\brdrw20\brdrcf4 \clbrdrb\brdrs\brdrw20\brdrcf4 \clbrdrr\brdrs\brdrw20\brdrcf4 \clpadl100 \clpadr100 \gaph\cellx8640
 \pard\intbl\itap1\pardeftab720\sl360\slmult1\partightenfactor0
 \cf2 \cb3 "Pbinds".aid\cb1 \cell \lastrow\row
+\pard\pardeftab720\sl360\slmult1\partightenfactor0
+\cf2 \
 }

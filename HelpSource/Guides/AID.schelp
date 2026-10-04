@@ -3,8 +3,10 @@ summary:: Documentation lookup helper adding the aid method to the String class.
 categories:: Libraries>Documentation
 related:: Guides/UsingQuarks, Classes/Quarks, Classes/Quark, Classes/String
 
-strong::AID:: adds the convenience method link::Classes/String#-aid:: to link::Classes/String::.
-It provides a fast, intuitive way to look up SuperCollider documentation directly from string literals for new users, occasional users, and those working with link::Classes/Quarks##third-party Quarks::.
+strong::AID:: is a SuperCollider documentation lookup helper that adds the link::Classes/String#-aid#.aid:: method to the link::Classes/String:: class.
+It provides a fast and intuitive way to look up help files, browse URLs, and open local files directly from string literals.
+This makes it ideal for SuperCollider novices, occasional users, and those exploring link::Classes/Quarks##third-party Quarks::.
+
 It is syntactic sugar for the following methods:
 
 list::
@@ -13,7 +15,7 @@ list::
 ## link::Classes/String#-openOS::
 ::
 
-Classes, methods, titles, and summaries work in the same way as link::Classes/String#-help:::
+Classes, methods, titles, and summaries function exactly like link::Classes/String#-help:::
 
 code::
 // Classes:
@@ -36,17 +38,20 @@ code::
 Online documentation, web addresses, and local files (such as SCD, HTML, or any other format handled by the OS default application) can also be accessed directly:
 
 code::
-// Online documentation and web addresses:
+// Direct access to online documentation and URLs:
 "https://github.com/supercollider-quarks/quarks".aid;
 
-// Local HTML files:
+// Local HTML and documentation files:
 (SCDoc.helpTargetDir +/+ "Guides/AID.html").aid;
 (SCDoc.helpTargetDir +/+ "help.html").aid;
 
-// Local files (opens in the OS default application):
+// Local files (opens in the operating system's default application):
 (Quarks.folder +/+ "AID/AID.scd").aid; // Local SCD files:
 (Quarks.folder +/+ "AID/Classes/extString.sc").aid  // Local SC files:
 (Quarks.folder +/+ "AID/README.rtf").aid; // Local RTF files:
+
+// Quark folders (opens in the HelpBrowser for easy access to various help documents):
+(Quarks.folder +/+ "AID").aid;
 ::
 
 If no exact match is found, it automatically falls back to the SuperCollider Help Search page:
