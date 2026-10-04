@@ -35,6 +35,9 @@ and HTML files, can also be accessed.
 // Local SCD files:
 (Quarks.folder +/+ "AID/AID.scd").aid;
 
+// Local SCD files without path:
+"AID.scd".aid // "AID.scd".resolveRelative.openDocument
+
 // Local SC files:
 (Quarks.folder +/+ "AID/Classes/extString.sc").aid
 
