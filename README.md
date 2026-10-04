@@ -43,7 +43,7 @@ Append `.aid` to any string representing a class name, method, search term, URL,
 (Quarks.folder +/+ "AID/README.rtf").aid; // Local RTF files
 
 // Local SCD files without path:
-"AID.scd".aid // "AID.scd".resolveRelative.openDocument
+"test.scd".aid // "test.scd".resolveRelative.openDocument
 
 // Quark folders (opens in the HelpBrowser for easy access to various help documents):
 (Quarks.folder +/+ "AID").aid;

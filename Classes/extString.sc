@@ -22,10 +22,14 @@
 			if(File.exists(path)) {
 				path.openOS
 			} {
-				if(Platform.openHelpFileAction.notNil) {
-					Platform.openHelpFileAction.value(this)
+				if(this.endsWith(".scd")) {
+					(thisProcess.nowExecutingPath.dirname +/+ this).openDocument
 				} {
-					HelpBrowser.openHelpFor(this)
+					if(Platform.openHelpFileAction.notNil) {
+						Platform.openHelpFileAction.value(this)
+					} {
+						HelpBrowser.openHelpFor(this)
+					}
 				}
 			}
 		}
