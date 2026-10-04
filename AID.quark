@@ -9,7 +9,7 @@
 	copyright:		"prko, 2026",
 	author:			"PyoungRyang Ko",
 	url:			"https://github.com/prko/AID",
-	isCompatible:	{ Main.versionAtLeast(3, 15) },
+	isCompatible:	{ Main.versionAtLeast(3, 10, 4) },
 	organisation:	"none",
 	country:		"South Korea",
 	since:			"2026"
