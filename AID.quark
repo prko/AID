@@ -2,7 +2,7 @@
 	name:			"AID",
 	summary:		"Documentation lookup helpers for String.",
 	version:		"0.0.1",
-	schelp:			"AID.schelp",
+	schelp:			"Guides/AID",
 	helpdoc:		"AID.html",
 	dependencies:	[],
 	license:		"MIT",
